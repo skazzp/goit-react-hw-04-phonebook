@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 
-const ContactList = ({ filteredContacts, removeContact }) => {
+const ContactList = ({ filterContacts, removeContact }) => {
+  let filteredContacts = filterContacts();
   return (
     <ul className={css.list}>
       {filteredContacts.map(contact => {
